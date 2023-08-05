@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+    /* Estilo para o rodapé */
+    .footer {
+      background-color: black;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+      
+
+    /* Estilo para a lista de informações no rodapé */
+    .footer-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Estilo para o botão de rede social */
+    .social-btn {
+      display: inline-block;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    /* Estilo para o ícone do Facebook, LinkedIn e Instagram */
+    .icon {
+      width: 24px; /* Defina o tamanho desejado para a largura da imagem */
+      height: 24px; /* Defina o tamanho desejado para a altura da imagem */
+      margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+      vertical-align: middle;
+      border-radius: 4px; 
+    }
+
+    .icon-facebook {
+      background-color: #3b5998; /* Cor do Facebook */
+      border-radius: 50%; 
+    }
+
+    .icon-linkedin {
+      background-color: #0077B5; /* Cor do LinkedIn */
+    }
+
+    .icon-instagram {
+      background-color: #E4405F; /* Cor do Instagram */
+    }
+
+    .social-btn:hover {
+      opacity: 0.8; /* Reduz a opacidade ao passar o mouse */
+    }
+    
+    /* Estilo para a barra de navegação fixada no topo */
+    .navbar {
+      background-color: white; /* Fundo branco */
+      opacity: 10; /* Opacidade para tornar a barra levemente translúcida */
+      color: black; /* Cor do texto */
+    }
+    
+    /* Set a fixed size for the carousel images */
+    .carousel-item img {
+     width: 500px;
+     width: auto;
+     height: 600px;
+     object-fit: cover;
+    }
+    /* Classe para aumentar o tamanho da imagem */
+    .bigger-image img {
+      width: 100%;
+      max-height: 400px; /* Defina a altura máxima que você deseja */
+    }
+    /* Classe para aumentar o tamanho da imagem */
+    .bigger-image img {
+      width: 70%;
+      max-height: 200px; /* Defina a altura máxima que você deseja */
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .bg-card, .bg-img, .col-md-6 {
+      margin-bottom: 30px;
+    }
+
+    .col-md-6:last-child {
+      margin-bottom: 0; /* Remove a margem inferior do último col-md-6 para o espaço entre a imagem e o último parágrafo */
+    }
+
+    .custom-image {
+      max-width: 100%;
+      max-height: 60%; /* Defina a altura máxima que você deseja */
+    }
+      /* Estilo para paragrafos diversos */
+
+    .text-enter-home {
+      margin-bottom: 20px;
+      font-size: 50px;
+      padding: 10px;
+      text-align: center;
+
+    }
+
+    .text-enter-promocoes {
+      margin-bottom: 20px;
+      font-size: 50px;
+      padding: 10px;
+      text-align: center;
+
+    }
+
+    .text-enter-destino {
+      margin-bottom: 20px;
+      font-size: 50px;
+      padding: 10px;
+      text-align: center;
+
+    }
+
+    .text-enter {
+      margin-bottom: 20px;
+      font-size: 20px;
+      padding: 10px;
+      text-align: center;
+
+    }
+
+
+      /* Estilo para o texto do card home nossos serviços */
+
+    .rounded-box {
+      border: 1px solid #ced4da;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    /* Estilo para o paragrafo home */
+
+    .text-home {
+      margin-bottom: 20px;
+      font-size: 20px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Estilo para cards promoções */
+
+    .text-card {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      padding: 5%;
+      padding: 100px;
+    }
+
+    .card-text {
+      
+    }
+	
+  </style>
+  </head>
+  <body>
+    <nav class="navbar fixed-top">    
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#promocoes">Planos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#destino">Destino</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="tab-content">
+      <div id="home" class="tab-pane active">
+        <!-- Conteúdo da página Home -->
+        <h1>Página Inicial</h1>
+        <p class="text-enter-home"><strong>Bem vindo a nossa página.</strong></p>
+        <p class="text-home">Somos uma rede de agências especializadas em viagens e excursões internacionais, trazendo comodidade, conforto e praticidade desde o planejamento até o retorno. Nossa abordagem informatizada e personalizada garante um atendimento excepcional ao longo de todo o seu trajeto, e oferecemos uma variedade de planos para atender às suas necessidades específicas. Seja você um viajante individual, parte de um duo ou em uma viagem familiar, temos opções personalizadas para cada situação. Conte com nossos diversos canais de atendimento para tornar sua experiência única, desde o momento da partida até o seu retorno.</p>
+        
+        <div class="container text-center">
+	        <div class="row">
+	      <!-- Coluna do Cartão com fundo -->
+	          <div class="col-md-6 bg-card">
+		          <div class="card">
+		            <div class="card-body">
+		            <h5 class="card-title">Seu Guia Memorável</h5>
+		            <p class="card-text">Esplore o Mundo com Confiança em nossa Página especializada.</p>
+		          </div>
+		        </div>
+	        </div>
+	      <!-- Coluna da Imagem com fundo -->
+	      <div class="col-md-6 mb-3 mb-md-0 bg-img">
+		      <div class="bigger-image">
+		      <img src="assets/minimalistatour.jpeg" class="img-fluid rounded" alt="...">
+		      </div>
+	      </div>
+	    </div>
+	  </div>
+    <p class="text-enter-home"><strong>Fornecemos atendimento personalizado</strong></p>
+
+	  <div class="container-fluid text-center">
+	    <div class="row">
+	      <!-- Coluna do Cartão 1 -->
+	      <div class="col-md-6">
+		      <div class="card">
+		      <img src="assets/destino7.avif" class="card-img-top" alt="...">
+		        <div class="card-body">
+		        <p class="card-text">Tenha uma experiência inigualável.</p>
+		        </div>
+		      </div>
+	      </div>
+	            <!-- Coluna do Cartão 2 -->
+	      <div class="col-md-6">
+		      <div class="card">
+		      <img src="assets/destino6.avif" class="card-img-top" alt="...">
+		      <div class="card-body">
+		      <p class="card-text">Garantimos todo o processo de forma simples.</p>
+		      </div>
+		    </div>
+	    </div>
+	  </div>
+	  </div>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <img src="assets/destinohome.jpg" class="custom-image" alt="...">
+        </div>
+        <div class="col">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="rounded-box">
+                  <h3>Nossos Serviços:</h3>
+                  <ul>
+                    <li>Suporte Personalizado para Estrangeiros</li>
+                    <li>Dicas Locais e Recomendações</li>
+                    <li>Assistência Multilíngue</li>
+                    <li>Informações Úteis para sua Estadia</li>
+                    <li>Comunidade Engajada para Conexões</li>
+                  </ul>
+                </div>
+                <div class="rounded-box">
+                  <p>Conecte-se Conosco e Facilite sua Experiência no Exterior!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+      </div>
+
+      <div id="promocoes" class="tab-pane">
+        <!-- Conteúdo da página de Promoções -->
+        <h1>Planos</h1>
+        <p class="text-enter-promocoes"><strong>Aqui estão nossos planos atuais.</strong></p>
+        <p class="text-enter">Oferecemos agilidade e praticidade priorizamos seu conforto em qualquer lugar do mundo.</p>
+        
+        
+        <div class="row text-card">
+          <div class="col-md-4">
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+              <div class="card-header bg-transparent border-success"></div>
+              <div class="card-body text-success">
+                <h5 class="card-title">Individual</h5>
+                <p class="card-text">Oferecemos planos para todos os gostos.</p>
+              </div>
+              <div class="card-footer bg-transparent border-success"></div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card border-primary" style="max-width: 18rem;">
+              <div class="card-header bg-transparent border-primary"></div>
+              <div class="card-body text-primary">
+                <h5 class="card-title">Plano Duo</h5>
+                <p class="card-text">Comodidade e perfeição para momentos especiais.</p>
+              </div>
+              <div class="card-footer bg-transparent border-primary"></div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card border-warning" style="max-width: 18rem;">
+              <div class="card-header bg-transparent border-warning"></div>
+              <div class="card-body text-warning">
+                <h5 class="card-title">Plano Familiar</h5>
+                <p class="card-text">Oferecemos o melhor ambiente com o menor custo e preços acessíveis.</p>
+              </div>
+              <div class="card-footer bg-transparent border-warning"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row card-text">
+          <div class="col-md-4">
+            <p class="text-enter">Seja a negocios ou a passeio sua estadia será segura e com 100% de disponibilidade da nossa equipe para o que for necessário durante o seu trajeto.</p>
+          </div>
+        
+          <div class="col-md-4">
+            <p class="text-enter">Temos os melhores planos e serviços para tornar o seu bem esta uma prioridade em casos de urgência ou um simples  atendimento.</p>
+          </div>
+        
+          <div class="col-md-4">
+            <p class="text-enter">Sua família protejida e valirizada tornando o seu comforte uma dedicação inteira de nossa equipe com profissionais capacitados e com senso de urgência.</p>
+          </div>
+        </div>
+        
+      </div>
+      <div id="destino" class="tab-pane">
+        <!-- Conteúdo da página de Destino -->
+        <h1>Destino</h1>
+        <p class="text-enter-destino"><strong>Descubra o seu incrível próximo destino.</strong></p>
+        <p class="text-enter">Novos horizontes para sua comodidade em qualquer lugar e momento.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/destino0.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Segurança</h5>
+                <p class="card-text">Seu trajeto a um passo do seu alcance.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">priorizamos sua jornada</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/destino01.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Agilidade</h5>
+                <p class="card-text">Canais multilíngues durante toda a jornada.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">acesso priorizado globalmente</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/destino02.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Conforto</h5>
+                <p class="card-text">Esteja atualizado o preparado para qualquer ocasião.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">transfome sua rotina</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer div para todas as abas -->
+    <footer class="footer mt-5">
+      <div class="container">
+        <ul class="footer-list">
+          <li>
+            Endereço: Av. Exemplo, 123, Cidade - Estado
+          </li>
+          <li>
+            Telefone: (00) 1234-5678
+          </li>
+          <div class="container">
+            <!-- Botão de rede social - Facebook -->
+            <a class="social-btn" href="https://www.facebook.com/felipe.bentoferreira">
+              <img class="icon icon-facebook" src="assets/facebook0.png" alt="Facebook">
+              Facebook
+            </a>
+
+            <!-- Botão de rede social - LinkedIn -->
+            <a class="social-btn" href="https://www.linkedin.com/in/fbferreiragg/">
+              <img class="icon icon-linkedin" src="assets/linkedin0.png" alt="LinkedIn">
+              LinkedIn
+            </a>
+
+            <!-- Botão de rede social - Instagram -->
+            <a class="social-btn" href="https://www.instagram.com/bfelipef037/">
+              <img class="icon icon-instagram" src="assets/instagram0.png" alt="Instagram">
+              Instagram
+            </a>
+          </div>
+        </ul>
+      </div>
+    </footer>
+
+
+    <!-- Adicione o jQuery antes do Bootstrap.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Adicione o Bootstrap.js (com o Popper.js embutido na versão bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
