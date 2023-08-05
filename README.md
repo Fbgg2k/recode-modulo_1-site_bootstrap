@@ -1,4 +1,4 @@
-# site_bootstrap
+# recode_atividade_módulo_1_site_bootstrap
 
 Atividade módulo-1 Recode
 
